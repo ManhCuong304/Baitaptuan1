@@ -1,0 +1,28 @@
+using System;
+namespace TongDonHang
+{
+    internal class HangHoa
+    {
+        static void Main(String[] args)
+        {
+            try
+            {
+                Console.Write("Nhap so luong san pham: ");
+                int soluong = int.Parse(Console.ReadLine());
+                Console.Write("Nhap don gia cua san pham: ");
+                float dongia = float.Parse(Console.ReadLine());
+                float tong =soluong * dongia;
+                Console.WriteLine("Tong gia tri don hang la: " +tong);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Vui long nhap so:");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Loi khong xac dinh:");
+            }
+            
+        }
+    }
+}
